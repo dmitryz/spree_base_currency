@@ -1,8 +1,10 @@
 # encoding: UTF-8
+$:.push File.expand_path("../lib", __FILE__)
+require "spree_base_currency/version"
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_base_currency'
-  s.version     = '2.3.1'
+  s.version     = SpreeBaseCurrency::VERSION
   s.summary     = 'Spree adding base price with currency'
   s.description = 'Adding base price with currency conversion to local currency to all variants of product.'
   s.required_ruby_version = '>= 1.9.3'
