@@ -6,5 +6,10 @@ module Spree
 			amount = Spree::Currency.convert(self, currency)
 			Spree::Price.new(:variant_id => self.id, :amount => amount, :currency => currency)
 		end
+
+		def base_price=(price)
+			self[:base_price] = parse_price(price) if price.present?
+		end
+
 	end
 end
