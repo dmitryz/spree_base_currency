@@ -8,7 +8,9 @@ module Spree
 		end
 
 		def base_price=(price)
+			puts "before Parse #{price}"
 			self[:base_price] = parse_price(price) if price.present?
+			puts "after Parse #{self.base_price}"
 		end
 
 	end
